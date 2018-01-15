@@ -6,20 +6,7 @@ StudyAid
 </name>
 </assembly>
 <members>
-<member name="P:Study_Aid.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:Study_Aid.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:Study_Aid.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="M:Study_Aid.frmMainMenu.btnStart_Click(System.Object,System.EventArgs)">
+<member name="M:Study_Aid.frmMainMenu.btnStart_Click(System.Object,System.EventArgs)">
 	<summary>
  Create a RandList of Questions using the manually-input prompts and answers, then start the quiz.
  </summary>
@@ -45,6 +32,43 @@ StudyAid
 </member><member name="T:Study_Aid.frmMainMenu">
 	<summary>
  The first form opened in the application. Sets up the quiz.
+ </summary>
+</member><member name="M:Study_Aid.Question.Copy(Study_Aid.Question)">
+	<summary>
+ A static/shared function that returns a copy of the input Question.
+ </summary>
+	<param name="qstOriginal">The Question to be copied.</param>
+	<returns>A copy of the original Question.</returns>
+</member><member name="M:Study_Aid.Question.#ctor(System.String,System.String)">
+	<summary>
+ A constructor that takes a prompt and answer as String.
+ </summary>
+	<param name="prompt">The prompt.</param>
+	<param name="answer">The answer.</param>
+</member><member name="M:Study_Aid.Question.GetPrompt">
+	<summary>
+ Returns the prompt String.
+ </summary>
+	<returns>The prompt String.</returns>
+</member><member name="M:Study_Aid.Question.GetAnswer">
+	<summary>
+ Returns the answer String.
+ </summary>
+	<returns>The answer String.</returns>
+</member><member name="M:Study_Aid.Question.HasBeenWrong">
+	<summary>
+ Returns whether or not the Question has been answered incorrectly.
+ </summary>
+	<returns>True if the Question has been answered incorrectly, False otherwise.</returns>
+	<remarks></remarks>
+</member><member name="M:Study_Aid.Question.MarkWrong">
+	<summary>
+ Sets the Question as having been answered incorrectly.
+ </summary>
+</member><member name="T:Study_Aid.Question">
+	<summary>
+ A class containing a prompt String, answer String, and Boolean value of whether or not the question has
+ been answered incorrectly.
  </summary>
 </member><member name="T:Study_Aid.frmQuiz.Status">
 	<summary>
@@ -99,6 +123,19 @@ StudyAid
 	<summary>
  The form that hosts the quiz.
  </summary>
+</member><member name="P:Study_Aid.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Study_Aid.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Study_Aid.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
 </member><member name="M:Study_Aid.RandList`1.Add(`0)">
 	<summary>
  Adds an item of generic type T to the contents of the RandList.
@@ -128,43 +165,6 @@ StudyAid
  A list data type that returns a random one of its values with the Remove function.
  </summary>
 	<typeparam name="T">A generic data type.</typeparam>
-</member><member name="M:Study_Aid.Question.Copy(Study_Aid.Question)">
-	<summary>
- A static/shared function that returns a copy of the input Question.
- </summary>
-	<param name="qstOriginal">The Question to be copied.</param>
-	<returns>A copy of the original Question.</returns>
-</member><member name="M:Study_Aid.Question.#ctor(System.String,System.String)">
-	<summary>
- A constructor that takes a prompt and answer as String.
- </summary>
-	<param name="prompt">The prompt.</param>
-	<param name="answer">The answer.</param>
-</member><member name="M:Study_Aid.Question.GetPrompt">
-	<summary>
- Returns the prompt String.
- </summary>
-	<returns>The prompt String.</returns>
-</member><member name="M:Study_Aid.Question.GetAnswer">
-	<summary>
- Returns the answer String.
- </summary>
-	<returns>The answer String.</returns>
-</member><member name="M:Study_Aid.Question.HasBeenWrong">
-	<summary>
- Returns whether or not the Question has been answered incorrectly.
- </summary>
-	<returns>True if the Question has been answered incorrectly, False otherwise.</returns>
-	<remarks></remarks>
-</member><member name="M:Study_Aid.Question.MarkWrong">
-	<summary>
- Sets the Question as having been answered incorrectly.
- </summary>
-</member><member name="T:Study_Aid.Question">
-	<summary>
- A class containing a prompt String, answer String, and Boolean value of whether or not the question has
- been answered incorrectly.
- </summary>
 </member>
 </members>
 </doc>

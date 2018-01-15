@@ -14,8 +14,8 @@ Public Class frmMainMenu
     Private Sub btnStart_Click(sender As System.Object, e As System.EventArgs) Handles btnStart.Click
 
         'Must use Chr(10) because a new line in a multi-line textbox is not defined by vbNewLine
-        Dim strPrompts() As String = Split(txtPrompts.Text, Chr(10))
-        Dim strAnswers() As String = Split(txtAnswers.Text, Chr(10))
+        Dim strPrompts() As String = Split(txtPrompts.Text.Trim(), Chr(10))
+        Dim strAnswers() As String = Split(txtAnswers.Text.Trim(), Chr(10))
 
         If strPrompts.GetUpperBound(0) = strAnswers.GetUpperBound(0) And strPrompts.GetUpperBound(0) > 0 Then
 
