@@ -1,0 +1,10 @@
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\bin\Release\Study Aid.exe
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\bin\Release\Study Aid.pdb
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\bin\Release\Study Aid.xml
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Release\Study_Aid.frmMainMenu.resources
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Release\Study_Aid.frmQuiz.resources
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Release\Study_Aid.Resources.resources
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Release\Study Aid.vbproj.GenerateResource.Cache
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Release\Study Aid.exe
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Release\Study Aid.xml
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Release\Study Aid.pdb
