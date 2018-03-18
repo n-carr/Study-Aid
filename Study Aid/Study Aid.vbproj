@@ -72,10 +72,10 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmMainMenu.Designer.vb">
-      <DependentUpon>frmMainMenu.vb</DependentUpon>
+    <Compile Include="frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMainMenu.vb">
+    <Compile Include="frmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmQuiz.Designer.vb">
@@ -84,6 +84,7 @@
     <Compile Include="frmQuiz.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GeneralUtilities.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -99,12 +100,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PublicVariables.vb" />
     <Compile Include="Question.vb" />
-    <Compile Include="RandList.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmMainMenu.resx">
-      <DependentUpon>frmMainMenu.vb</DependentUpon>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuiz.resx">
       <DependentUpon>frmQuiz.vb</DependentUpon>

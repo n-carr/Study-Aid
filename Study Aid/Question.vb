@@ -4,20 +4,9 @@
 ''' </summary>
 Public Class Question
 
-    Private prompt As String
-    Private answer As String
-    Private wrongStatus As Boolean = False
-
-    ''' <summary>
-    ''' A static/shared function that returns a copy of the input Question.
-    ''' </summary>
-    ''' <param name="qstOriginal">The Question to be copied.</param>
-    ''' <returns>A copy of the original Question.</returns>
-    Shared Function Copy(qstOriginal As Question) As Question
-
-        Return New Question(qstOriginal.GetPrompt(), qstOriginal.GetAnswer())
-
-    End Function
+    Private _prompt As String
+    Private _answer As String
+    Private _wrong As Boolean = False
 
     ''' <summary>
     ''' A constructor that takes a prompt and answer as String.
@@ -25,49 +14,61 @@ Public Class Question
     ''' <param name="prompt">The prompt.</param>
     ''' <param name="answer">The answer.</param>
     Sub New(prompt As String, answer As String)
-
-        Me.prompt = prompt
-        Me.answer = answer
+        Me._prompt = prompt
+        Me._answer = answer
 
     End Sub
 
     ''' <summary>
-    ''' Returns the prompt String.
+    ''' Gets the prompt string of the question.
     ''' </summary>
-    ''' <returns>The prompt String.</returns>
-    Function GetPrompt() As String
+    ''' <returns>The prompt string.</returns>
+    ReadOnly Property Prompt As String
+        Get
+            Return Me._prompt
+        End Get
 
-        Return prompt
-
-    End Function
+    End Property
 
     ''' <summary>
-    ''' Returns the answer String.
+    ''' Gets the answer string of the question.
     ''' </summary>
-    ''' <returns>The answer String.</returns>
-    Function GetAnswer() As String
+    ''' <returns>The answer string.</returns>
+    ReadOnly Property Answer As String
+        Get
+            Return Me._answer
+        End Get
 
-        Return answer
-
-    End Function
+    End Property
 
     ''' <summary>
-    ''' Returns whether or not the Question has been answered incorrectly.
+    ''' Gets or sets a value representing whether the question has been incorrectly answered.
     ''' </summary>
-    ''' <returns>True if the Question has been answered incorrectly, False otherwise.</returns>
-    ''' <remarks></remarks>
-    Function HasBeenWrong() As Integer
+    ''' <returns>True if the question has been incorrectly answered, False otherwise.</returns>
+    Property Wrong As Boolean
+        Get
+            Return Me._wrong
+        End Get
 
-        Return wrongStatus
+        Set(wrong As Boolean)
+            Me._wrong = wrong
+        End Set
 
-    End Function
+    End Property
 
     ''' <summary>
-    ''' Sets the Question as having been answered incorrectly.
+    ''' Set the question as having been answered incorrectly.
     ''' </summary>
-    Sub MarkWrong()
+    Sub SetWrong()
+        Me._wrong = True
 
-        wrongStatus = True
+    End Sub
+
+    ''' <summary>
+    ''' Set the question as having not been answered incorrectly.
+    ''' </summary>
+    Sub ResetWrong()
+        Me._wrong = False
 
     End Sub
 

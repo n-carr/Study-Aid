@@ -7,14 +7,14 @@ C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj
 C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Debug\Study Aid.xml
 C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Debug\Study Aid.pdb
 C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Debug\Study_Aid.frmQuiz.resources
-C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Debug\Study_Aid.frmMainMenu.resources
+C:\Users\Nathaniel\Documents\Visual Studio 2010\Projects\Study Aid\Study Aid\obj\x86\Debug\Study_Aid.frmMenu.resources
 C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\obj\x86\Debug\Study Aid.exe
 C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\obj\x86\Debug\Study Aid.xml
 C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\obj\x86\Debug\Study Aid.pdb
 C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\bin\Debug\Study Aid.exe
 C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\bin\Debug\Study Aid.pdb
 C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\bin\Debug\Study Aid.xml
-C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\obj\x86\Debug\Study_Aid.frmMainMenu.resources
+C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\obj\x86\Debug\Study_Aid.frmMenu.resources
 C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\obj\x86\Debug\Study_Aid.frmQuiz.resources
 C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\obj\x86\Debug\Study_Aid.Resources.resources
 C:\Users\Nathaniel\Documents\GitHub\Study-Aid\Study Aid\obj\x86\Debug\Study Aid.vbproj.GenerateResource.Cache

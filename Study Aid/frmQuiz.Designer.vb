@@ -47,7 +47,6 @@ Partial Class frmQuiz
         Me.btnYes.TabIndex = 1
         Me.btnYes.Text = "Yes"
         Me.btnYes.UseVisualStyleBackColor = True
-        Me.btnYes.Visible = False
         '
         'btnNo
         '
@@ -57,7 +56,6 @@ Partial Class frmQuiz
         Me.btnNo.TabIndex = 2
         Me.btnNo.Text = "No"
         Me.btnNo.UseVisualStyleBackColor = True
-        Me.btnNo.Visible = False
         '
         'btnCont
         '
@@ -67,7 +65,6 @@ Partial Class frmQuiz
         Me.btnCont.TabIndex = 0
         Me.btnCont.Text = "Show Answer"
         Me.btnCont.UseVisualStyleBackColor = True
-        Me.btnCont.Visible = False
         '
         'lblRemaining
         '

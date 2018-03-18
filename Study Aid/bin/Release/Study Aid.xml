@@ -6,122 +6,61 @@ StudyAid
 </name>
 </assembly>
 <members>
-<member name="M:Study_Aid.frmMainMenu.btnStart_Click(System.Object,System.EventArgs)">
+<member name="M:Study_Aid.frmMenu.MakeQuestions">
 	<summary>
- Create a RandList of Questions using the manually-input prompts and answers, then start the quiz.
+ Generate a List of Question from the txtPrompts and txtAnswers TextBoxes.
  </summary>
-	<param name="sender"></param>
-	<param name="e"></param>
-</member><member name="M:Study_Aid.frmMainMenu.btnFile_Click(System.Object,System.EventArgs)">
-	<summary>
- Create a RandList of Questions using a user-selected file, then start the quiz.
- </summary>
-	<param name="sender"></param>
-	<param name="e"></param>
-</member><member name="M:Study_Aid.frmMainMenu.PromptFile">
-	<summary>
- Prompts the user for a .txt quiz file.
- </summary>
-	<returns>The selected file as a String.</returns>
-</member><member name="M:Study_Aid.frmMainMenu.FormQuestions(System.String)">
-	<summary>
- Creates a RandList of Questions from a file address.
- </summary>
-	<param name="strFile">A file address.</param>
-	<returns>A RandList of Questions.</returns>
-</member><member name="T:Study_Aid.frmMainMenu">
+	<returns>The List of Question.</returns>
+</member><member name="T:Study_Aid.frmMenu">
 	<summary>
  The first form opened in the application. Sets up the quiz.
  </summary>
-</member><member name="M:Study_Aid.Question.Copy(Study_Aid.Question)">
+</member><member name="M:Study_Aid.GeneralUtilities.RandInt(System.Int32,System.Int32)">
 	<summary>
- A static/shared function that returns a copy of the input Question.
+ Returns a random integer in range of low to high (inclusive). All values are equally probable.
  </summary>
-	<param name="qstOriginal">The Question to be copied.</param>
-	<returns>A copy of the original Question.</returns>
-</member><member name="M:Study_Aid.Question.#ctor(System.String,System.String)">
+	<param name="low">The minimum possible integer value.</param>
+	<param name="high">The maximum possible integer value.</param>
+</member><member name="M:Study_Aid.GeneralUtilities.RandInt(System.Int32)">
 	<summary>
- A constructor that takes a prompt and answer as String.
+ Returns a random integer in range of 0 to high (inclusive). All values are equally probable.
  </summary>
-	<param name="prompt">The prompt.</param>
-	<param name="answer">The answer.</param>
-</member><member name="M:Study_Aid.Question.GetPrompt">
+	<param name="high">The maximum possible integer value.</param>
+</member><member name="M:Study_Aid.GeneralUtilities.Constrain(System.Double,System.Double,System.Double)">
 	<summary>
- Returns the prompt String.
+ Returns a double constrained to the range of low to high (inclusive).
  </summary>
-	<returns>The prompt String.</returns>
-</member><member name="M:Study_Aid.Question.GetAnswer">
+	<param name="number">The number to contrain.</param>
+	<param name="low">The minimum of the range.</param>
+	<param name="high">The maximum of the range.</param>
+	<returns>The constrained number.</returns>
+</member><member name="M:Study_Aid.GeneralUtilities.InRange(System.Double,System.Double,System.Double)">
 	<summary>
- Returns the answer String.
+ Determines whether a number exists in the range of low to max (inclusive).
  </summary>
-	<returns>The answer String.</returns>
-</member><member name="M:Study_Aid.Question.HasBeenWrong">
+	<param name="number">The number to check.</param>
+	<param name="low">The minimum of the range.</param>
+	<param name="high">The maximum of the range.</param>
+	<returns>True if the number is in the range, False otherwise.</returns>
+</member><member name="M:Study_Aid.GeneralUtilities.RandFromList``1(System.Collections.Generic.List{``0}@)">
 	<summary>
- Returns whether or not the Question has been answered incorrectly.
+ Removes and returns a random element from a List.
  </summary>
-	<returns>True if the Question has been answered incorrectly, False otherwise.</returns>
-	<remarks></remarks>
-</member><member name="M:Study_Aid.Question.MarkWrong">
+	<typeparam name="T">The type stored in the list.</typeparam>
+	<param name="list">The list from which to remove an element.</param>
+	<returns>A random element from the list.</returns>
+</member><member name="M:Study_Aid.GeneralUtilities.FixString(System.String@)">
 	<summary>
- Sets the Question as having been answered incorrectly.
+ Trim a string and replace the NEWLINE constant with a newline character.
  </summary>
-</member><member name="T:Study_Aid.Question">
+	<param name="toFix">The string to fix.</param>
+</member><member name="T:Study_Aid.GeneralUtilities">
 	<summary>
- A class containing a prompt String, answer String, and Boolean value of whether or not the question has
- been answered incorrectly.
+ A module of public constants and utility functions.
  </summary>
-</member><member name="T:Study_Aid.frmQuiz.Status">
+</member><member name="T:Study_Aid.PublicVariables">
 	<summary>
- An enumerated type that tracks what state the form is currently in.
- </summary>
-</member><member name="M:Study_Aid.frmQuiz.#ctor(Study_Aid.RandList{Study_Aid.Question})">
-	<summary>
- A custom constructor for frmQuiz that takes a RandList of Questions as an argument.
- </summary>
-	<param name="lstQuestions">A RandList of Questions.</param>
-</member><member name="M:Study_Aid.frmQuiz.GetQuestion(System.Boolean)">
-	<summary>
- Gets a single Question from lstQuestions. May or may not return the previous Question to the RandList.
- </summary>
-	<param name="replace">Whether or not the previous Question should be returned to the RandList.</param>
-</member><member name="M:Study_Aid.frmQuiz.DisplayPrompt">
-	<summary>
- Displays the prompt from qstCurrent.
- </summary>
-</member><member name="M:Study_Aid.frmQuiz.DisplayAnswer">
-	<summary>
- Displays the answer from qstCurrent.
- </summary>
-</member><member name="M:Study_Aid.frmQuiz.DisplayOver">
-	<summary>
- Displays the quiz completion message and allows the user to choose to retake the test.
- </summary>
-</member><member name="M:Study_Aid.frmQuiz.FixButtons">
-	<summary>
- Ensures the correct buttons are being displayed for the form's current status.
- </summary>
-</member><member name="M:Study_Aid.frmQuiz.btnCont_Click(System.Object,System.EventArgs)">
-	<summary>
- Display the answer if in Prompt status or end the application if in OverNoWrong status.
- </summary>
-	<param name="sender"></param>
-	<param name="e"></param>
-</member><member name="M:Study_Aid.frmQuiz.btnYes_Click(System.Object,System.EventArgs)">
-	<summary>
- Display a new Question or the over message if in Answer status or open a new quiz if in OverWrong
- status.
- </summary>
-	<param name="sender"></param>
-	<param name="e"></param>
-</member><member name="M:Study_Aid.frmQuiz.btnNo_Click(System.Object,System.EventArgs)">
-	<summary>
- Display a new Question if in Answer status or close the application if in OverWrong status.
- </summary>
-	<param name="sender"></param>
-	<param name="e"></param>
-</member><member name="T:Study_Aid.frmQuiz">
-	<summary>
- The form that hosts the quiz.
+ A module of public variables.
  </summary>
 </member><member name="P:Study_Aid.My.Resources.Resources.ResourceManager">
 	<summary>
@@ -136,35 +75,64 @@ StudyAid
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
-</member><member name="M:Study_Aid.RandList`1.Add(`0)">
+</member><member name="T:Study_Aid.frmQuiz.Status">
 	<summary>
- Adds an item of generic type T to the contents of the RandList.
+ An enumerated type that tracks what state the form is currently in.
  </summary>
-	<param name="item">The item to be added.</param>
-</member><member name="M:Study_Aid.RandList`1.Remove">
+</member><member name="M:Study_Aid.frmQuiz.Main">
 	<summary>
- Removes and returns a random item from the contents of the RandList.
+ This sub determines which actions to take with each form status.
  </summary>
-	<returns>A random item of type T.</returns>
-</member><member name="M:Study_Aid.RandList`1.Clear">
+</member><member name="M:Study_Aid.frmQuiz.UpdateText">
 	<summary>
- Removes all items from the contents of the RandList.
+ Place a prompt or answer into txtMain based on the form's current status. Update lblRemaining.
  </summary>
-</member><member name="M:Study_Aid.RandList`1.IsEmpty">
+</member><member name="M:Study_Aid.frmQuiz.UpdateButtons">
 	<summary>
- Determine whether or not the contents of the RandList are empty.
+ Enable or disable the form's buttons based on the current state.
  </summary>
-	<returns>True if empty, False if not.</returns>
-</member><member name="M:Study_Aid.RandList`1.GetCount">
+</member><member name="M:Study_Aid.frmQuiz.ButtonFocus">
 	<summary>
- Returns the number of items in the RandList.
+ Set focus to btnYes or btnCont.
  </summary>
-	<returns>The count of the RandList.</returns>
-</member><member name="T:Study_Aid.RandList`1">
+</member><member name="T:Study_Aid.frmQuiz">
 	<summary>
- A list data type that returns a random one of its values with the Remove function.
+ The form that hosts the quiz.
  </summary>
-	<typeparam name="T">A generic data type.</typeparam>
+</member><member name="M:Study_Aid.Question.#ctor(System.String,System.String)">
+	<summary>
+ A constructor that takes a prompt and answer as String.
+ </summary>
+	<param name="prompt">The prompt.</param>
+	<param name="answer">The answer.</param>
+</member><member name="P:Study_Aid.Question.Prompt">
+	<summary>
+ Gets the prompt string of the question.
+ </summary>
+	<returns>The prompt string.</returns>
+</member><member name="P:Study_Aid.Question.Answer">
+	<summary>
+ Gets the answer string of the question.
+ </summary>
+	<returns>The answer string.</returns>
+</member><member name="P:Study_Aid.Question.Wrong">
+	<summary>
+ Gets or sets a value representing whether the question has been incorrectly answered.
+ </summary>
+	<returns>True if the question has been incorrectly answered, False otherwise.</returns>
+</member><member name="M:Study_Aid.Question.SetWrong">
+	<summary>
+ Set the question as having been answered incorrectly.
+ </summary>
+</member><member name="M:Study_Aid.Question.ResetWrong">
+	<summary>
+ Set the question as having not been answered incorrectly.
+ </summary>
+</member><member name="T:Study_Aid.Question">
+	<summary>
+ A class containing a prompt String, answer String, and Boolean value of whether or not the question has
+ been answered incorrectly.
+ </summary>
 </member>
 </members>
 </doc>
